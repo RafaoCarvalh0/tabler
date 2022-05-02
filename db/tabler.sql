@@ -132,7 +132,7 @@ LOCK TABLES `active_sessions` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `usuario`
+-- Table structure for table `users`
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -150,13 +150,13 @@ CREATE TABLE `users` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuario`
+-- Dumping data for table `users`
 --
 
 LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES (1,'Rafael Vilas','Offar','123456','rafael.gostosa@.com','ProfilePics/Offar'),(2,'Vitor','Vitu','123456','testeteste','C:/Imagens/FotinhaManeira.jpg'),(3,'Clebin','Yrton','32546','email@alterado','D:/Imagens/FotinhaManeira.jpg'),(40,'Ronaldinho','Gaucho','1234','gr@gmail','C:/FotoPadrao'),(41,'Douglas Henrique','Tupete','123456','ajlshd@qwejhk','C:/FotoPadrao'),(42,'Johnny','Joooj','1234','Joooj@hotmail.com','C:/FotoPadrao'),(43,'tesdsd','23234','','sdd','C:/FotoPadrao'),(44,'Corno','Rafael','dfddf','fdsdf','C:/FotoPadrao'),(46,'Piroca','Murcha','piroca','piroquinhamurcha@hotmail.com','C:/FotoPadrao'),(48,'Jooj','','','','C:/FotoPadrao'),(49,'Johnny Carvalho','Carvalho JooJ','123456789','Jooj@Jooj.com.br','C:/FotoPadrao'),(54,'Ronaldão','Fenomeno','123456','teste@terra.com.br','C:/FotoPadrao'),(55,'teste','asdasd asd','asdfas','sdsd','C:/FotoPadrao'),(56,'Sou um usuário idiota','nossa','senha','vopo@oemail.aqui','C:/FotoPadrao'),(57,'Teste','joao','pablo','pablo','C:/FotoPadrao'),(58,'text','text','','text','C:/FotoPadrao'),(59,'carai','mermao','mermao','asa','C:/FotoPadrao'),(60,'Af','as','','aaaa','C:/FotoPadrao'),(61,'Vitor H N Piovezan','Vituh','vitor2142','vitor.piovezan7@gmail.com','C:/FotoPadrao'),(62,'joaozinhi','joana','','coalinha','C:/FotoPadrao'),(63,'joaozinhi','joanhinha','tefds','joaninha@joaninha','C:/FotoPadrao'),(64,'Vitoria','Viiiiiiiihx','1234','vi@vi.vi','C:/FotoPadrao'),(65,'Mika Ovileira','mika','','mika@mika.mika','C:/FotoPadrao'),(66,'Mika Ovileira','mikae','mika','mika@mika@mika.com','C:/FotoPadrao'),(67,'Daniela','daniela','123','rafaelvcarvalho@hotmail.com','C:/FotoPadrao'),(68,'UserTeste1','UserTeste','1234','user.teste','C:/FotoPadrao'),(69,'Vitor SUSS','Vitinho do Suss','vitu','vitu@vi.tu','C:/FotoPadrao');
-/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
