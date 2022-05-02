@@ -6,10 +6,10 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :tabler, Tabler.Repo,
-  username: "root",
-  password: "",
-  hostname: "localhost",
-  database: "tabler_test#{System.get_env("MIX_TEST_PARTITION")}",
+  username: System.get_env("MYSQL_USER"),
+  password: System.get_env("MYSQL_PASSWORD"),
+  hostname: System.get_env("DATABASE_HOST"),
+  database: System.get_env("DATABASE_TEST"),
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 

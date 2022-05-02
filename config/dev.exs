@@ -2,10 +2,10 @@ import Config
 
 # Configure your database
 config :tabler, Tabler.Repo,
-  username: "root",
-  password: "",
-  hostname: "localhost",
-  database: "tabler_dev",
+  username: System.get_env("MYSQL_USER"),
+  password: System.get_env("MYSQL_PASSWORD"),
+  hostname: String.to_integer(System.get_env("DATABASE_HOST")),
+  database: System.get_env("DATABASE_DEV"),
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
@@ -22,7 +22,7 @@ config :tabler, TablerWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "cV05tCUGlGFK634tLADQIKhcTOoE6BiPafTBJJOkC7qQO6DDWAnaKIG5GhWnqTFq",
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
   watchers: []
 
 # ## SSL Support
