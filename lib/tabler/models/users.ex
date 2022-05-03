@@ -3,12 +3,12 @@ defmodule Tabler.Users do
   import Ecto.Changeset
 
   schema "users" do
-    field :name, :string, size: 50
-    field :nick_name, :string, size: 15
-    field :password, :string, size: 15
-    field :char_sheet, :string, size: 255, default: nil
-    field :email, :string, size: 30
-    field :user_avatar, :string, size: 255, default: nil
+    field :name, :string
+    field :nick_name, :string
+    field :password, :string
+    field :char_sheet, :string, default: nil
+    field :email, :string
+    field :user_avatar, :string, default: nil
   end
 
   def changeset(player_table, attrs) do

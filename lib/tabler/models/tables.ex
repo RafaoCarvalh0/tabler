@@ -3,16 +3,16 @@ defmodule Tabler.Tables do
   import Ecto.Changeset
 
   schema "tables" do
-    field :table_admin, :string, size: 15, default: nil
-    field :title, :string, size: 45
-    field :desc, :string, size: 100
+    field :table_admin, :string, default: nil
+    field :title, :string
+    field :desc, :string
     field :max_players, :integer, default: 1
-    field :format, :string, size: 50
+    field :format, :string
     field :status, :string
-    field :initial_lvl, :string, size: 3, default: nil
-    field :player_experience, :string, size: 45, default: nil
-    field :chat_link, :string, size: 250, default: nil
-    field :created_at, :date, default: DateTime.utc_now()
+    field :initial_lvl, :string, default: nil
+    field :player_experience, :string, default: nil
+    field :chat_link, :string, default: nil
+    timestamps([{:created_at}])
   end
 
   def changeset(table, attrs) do

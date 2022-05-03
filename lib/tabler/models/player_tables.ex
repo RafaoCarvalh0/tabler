@@ -5,14 +5,13 @@ defmodule Tabler.PlayerTables do
   alias Tabler.Users
 
   schema "player_tables" do
-    field :table_admin, :string, size: 15, default: nil
-    has_many :id_table, Tables
-    has_many :id_player, Users
-    field :id_player, :int
+    field :table_admin, :string, default: nil
+    has_many :id_table, Tables, foreign_key: :id
+    has_many :id_player, Users, foreign_key: :id
     field :is_dm, :integer, default: 0
-    field :char_sheet, :string, size: 255, default: nil
-    field :char_name, :string, size: 45, default: nil
-    field :char_class, :string, size: 45, default: nil
+    field :char_sheet, :string, default: nil
+    field :char_name, :string, default: nil
+    field :char_class, :string, default: nil
 
   end
 
