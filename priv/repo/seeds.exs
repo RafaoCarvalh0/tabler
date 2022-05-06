@@ -9,11 +9,13 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
 alias Tabler.Repo
 alias Tabler.Formats
 alias Tabler.Users
 alias Tabler.Tables
 alias Tabler.PlayerTables
+alias Tabler.ActiveSessions
 
 # INSERT FORMATS
 Repo.insert!(%Formats{desc: "desc"})
@@ -82,7 +84,7 @@ Repo.insert!(%Formats{desc: "D&D 3.5E"})
 Repo.insert!(%Formats{desc: "D&D 3.5E Adventure Pack"})
 Repo.insert!(%Formats{desc: "D&D 3.5E The Black Company"})
 Repo.insert!(%Formats{desc: "D&D 4E"})
-Repo.insert!(%Formats{desc: "D&D 5E (Community Contributed)"})
+Repo.insert!(%Formats{desc: "D&D 5E"})
 Repo.insert!(%Formats{desc: "D&D 5E (Community, Chinese)"})
 Repo.insert!(%Formats{desc: "D&D 5E (Darker Dungeons)"})
 Repo.insert!(%Formats{desc: "D&D 5E (Scrolls)"})
@@ -183,7 +185,7 @@ Repo.insert!(%Users{
 
 Repo.insert!(%Users{
   name: "Vitor",
-  nick_name: "Vitu",
+  nick_name: "Bituh",
   password: "123456",
   email: "testeteste",
   user_avatar: "C:/Imagens/FotinhaManeira.jpg"
@@ -247,7 +249,7 @@ Repo.insert!(%Users{
 
 Repo.insert!(%Users{
   name: "Jooj",
-  nick_name: "",
+  nick_name: "Jaaj",
   password: "",
   email: "",
   user_avatar: "C:/FotoPadrao"
@@ -358,14 +360,6 @@ Repo.insert!(%Users{
 })
 
 Repo.insert!(%Users{
-  name: "Mika Ovileira",
-  nick_name: "mikae",
-  password: "mika",
-  email: "mika@mika@mika.com",
-  user_avatar: "C:/FotoPadrao"
-})
-
-Repo.insert!(%Users{
   name: "Daniela",
   nick_name: "daniela",
   password: "123",
@@ -384,18 +378,19 @@ Repo.insert!(%Users{
 Repo.insert!(%Users{
   name: "Vitor SUSS",
   nick_name: "Vitinho do Suss",
-  password: "vitu",
+  password: "2",
   email: "vitu@vi.tu",
   user_avatar: "C:/FotoPadrao"
 })
 
 # INSERT TABLES
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "teste de alteracao2",
   desc: "Aqui é informado a descrição da tables. Essa é uma descrição de teste",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 3,
-  format: "D&D 5e",
+  format: 67,
   status: "1",
   created_at: ~N[2021-04-19 21:07:41],
   initial_lvl: "1",
@@ -404,11 +399,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "teste de alteracao",
   desc: "desc alterada",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 3,
-  format: "D&D 5e",
+  format: 67,
   status: "1",
   created_at: ~N[2020-09-01 14:23:59],
   initial_lvl: "1",
@@ -417,11 +413,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Vitu",
+  table_admin: 2,
   title: "TESTANDO 123",
   desc: "DVD EH UM HOME SEXUAL",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 8,
-  format: "DND",
+  format: 67,
   status: "1",
   created_at: ~N[2020-09-01 14:23:59],
   initial_lvl: "1",
@@ -430,50 +427,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "XANDA",
-  title: "XANDAO",
-  desc: "XANDAO GOSTA DE OFERECER O 2 DE AGOSTO",
-  max_players: 2,
-  format: "TESTE",
-  status: "1",
-  created_at: ~N[2020-09-01 14:21:31],
-  initial_lvl: "1",
-  player_experience: "teste",
-  chat_link: "t"
-})
-
-Repo.insert!(%Tables{
-  table_admin: "NAOSE",
-  title: "OQ TA",
-  desc: "ACONTECENO NESSA PORRA",
-  max_players: 1,
-  format: "AJUDA NOIS PLZ",
-  status: "1",
-  created_at: ~N[2020-09-01 14:21:31],
-  initial_lvl: "1",
-  player_experience: "teste",
-  chat_link: "t"
-})
-
-Repo.insert!(%Tables{
-  table_admin: "Virgolino",
-  title: "Descent into Avernus",
-  desc: "Campanha descent into avernus",
-  max_players: 5,
-  format: "D&D5e",
-  status: "1",
-  created_at: ~N[2021-04-19 20:30:38],
-  initial_lvl: "1",
-  player_experience: "teste",
-  chat_link: "t"
-})
-
-Repo.insert!(%Tables{
-  table_admin: "AdmTeste1",
+  table_admin: 3,
   title: "tables1",
   desc: "Descricao tables 1",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 2,
-  format: "Formato tables 1",
+  format: 67,
   status: "2",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -482,11 +441,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "AdmTeste2",
+  table_admin: 2,
   title: "tables2",
   desc: "Descricao tables 2",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 2,
-  format: "Formato tables 2",
+  format: 67,
   status: "2",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -495,11 +455,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "AdmTeste3",
+  table_admin: 4,
   title: "tables3",
   desc: "Descricao tables 3",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 2,
-  format: "Formato tables 3",
+  format: 67,
   status: "2",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -508,11 +469,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "AdmTeste4",
+  table_admin: 4,
   title: "tables4",
   desc: "Descricao tables 4",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 2,
-  format: "Formato tables 4",
+  format: 67,
   status: "2",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -521,11 +483,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "AdmTeste5",
+  table_admin: 5,
   title: "tables5",
   desc: "Descricao tables 5",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 2,
-  format: "Formato tables 5",
+  format: 67,
   status: "2",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -534,11 +497,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "AdmTeste6",
+  table_admin: 6,
   title: "tables6",
   desc: "Descricao tables 6",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 2,
-  format: "Formato tables 6",
+  format: 67,
   status: "2",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -547,11 +511,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "AdmTeste7",
+  table_admin: 7,
   title: "tables7",
   desc: "Descricao tables 7",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 2,
-  format: "Formato tables 7",
+  format: 67,
   status: "2",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -560,11 +525,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "AdmTeste8",
+  table_admin: 7,
   title: "tables8",
   desc: "Descricao tables 8",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 2,
-  format: "Formato tables 8",
+  format: 67,
   status: "2",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -573,11 +539,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "AdmTeste9",
+  table_admin: 7,
   title: "tables9",
   desc: "Descricao tables 9",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 2,
-  format: "Formato tables 9",
+  format: 67,
   status: "2",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -586,11 +553,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Neandertal",
+  table_admin: 11,
   title: "australopiteco",
   desc: "teste de australopiteco",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 1,
-  format: "Formato Primal",
+  format: 67,
   status: "1",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -599,11 +567,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "1",
+  table_admin: 11,
   title: "Ilha do Molusco",
   desc: "Procura-se penis de 20 cm",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 1,
-  format: "Call of Cthulhu 7th Edition",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -612,11 +581,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "1",
+  table_admin: 11,
   title: "Segredo Moluscao",
   desc: "Procura-se Rafael",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 1,
-  format: "Cthulhu Dark",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -625,11 +595,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "1",
+  table_admin: 11,
   title: "Joao bolao",
   desc: "meu pau na tua mao",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 1,
-  format: "Cypher System",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -638,11 +609,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 11,
   title: "testeqtdejog",
   desc: "tables de testeqtdejog",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 3,
-  format: "D&D 5e",
+  format: 67,
   status: "1",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -651,11 +623,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "1",
+  table_admin: 11,
   title: "Agoravai mano",
   desc: "juro po se",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 6,
-  format: "Crônicas",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "4",
@@ -664,11 +637,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "Forja Gozada",
   desc: "Procura-se anões musculosos",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 5,
-  format: "Iron Kingdoms",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -677,11 +651,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "teste tables",
   desc: "asdasda",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 5,
-  format: "Cthulhu Dark",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -690,11 +665,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "testererer",
   desc: "sdasdasd",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 5,
-  format: "D&D 5E Adventures in Middle Earth",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 14:21:31],
   initial_lvl: "1",
@@ -703,11 +679,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "Rafael Teste",
   desc: "Teste Rafael",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 8,
-  format: "D&D Retroclone",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 12:33:48],
   initial_lvl: "3",
@@ -716,11 +693,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "Tesderedesu Rafaele",
   desc: "Faraele",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 7,
-  format: "D6",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 13:48:57],
   initial_lvl: "4",
@@ -729,11 +707,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "testeqtdejog",
   desc: "tables de testeqtdejog",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 3,
-  format: "D&D 5e",
+  format: 67,
   status: "1",
   created_at: ~N[2020-09-01 14:00:20],
   initial_lvl: "1",
@@ -742,11 +721,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "Vitória ória",
   desc: "Vitória ória",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 8,
-  format: "Cthulhu Tech",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 14:11:57],
   initial_lvl: "2",
@@ -755,11 +735,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "Gaudales",
   desc: "um",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 12,
-  format: "d20 System",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 17:16:24],
   initial_lvl: "10",
@@ -768,11 +749,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "teru",
   desc: "gcyvh",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 5,
-  format: "D&D 5E Adventures in Middle Earth",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-01 18:15:13],
   initial_lvl: "1",
@@ -781,11 +763,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "Offar",
+  table_admin: 1,
   title: "Teste de Criação",
   desc: "Ta funfando",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 10,
-  format: "D6 Fantasy",
+  format: 67,
   status: "0",
   created_at: ~N[2020-09-10 15:55:34],
   initial_lvl: "1",
@@ -794,11 +777,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "UserTeste",
+  table_admin: 26,
   title: "TesteRafa",
   desc: "Yooow",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 2,
-  format: "D&D 5E Adventures in Middle Earth",
+  format: 67,
   status: "0",
   created_at: ~N[2021-04-11 20:24:19],
   initial_lvl: "1",
@@ -807,11 +791,12 @@ Repo.insert!(%Tables{
 })
 
 Repo.insert!(%Tables{
-  table_admin: "UserTeste",
+  table_admin: 26,
   title: "Teste",
   desc: "asdasd",
+  session_date: DateTime.to_naive(DateTime.truncate(DateTime.utc_now(), :second)),
   max_players: 5,
-  format: "D&D 5E Adventures in Middle Earth",
+  format: 67,
   status: "0",
   created_at: ~N[2021-04-11 20:28:45],
   initial_lvl: "1",
@@ -962,4 +947,23 @@ Repo.insert!(%PlayerTables{
   char_sheet: "Mestre",
   char_name: "Mestre",
   char_class: "Mestre"
+})
+
+# ACTIVE SESSIONS
+Repo.insert!(%ActiveSessions{
+  id_player: 1,
+  id_table: 2,
+  session_date: Tables.get_session_date(2, 1)
+})
+
+Repo.insert!(%ActiveSessions{
+  id_player: 2,
+  id_table: 3,
+  session_date: Tables.get_session_date(3, 2)
+})
+
+Repo.insert!(%ActiveSessions{
+  id_player: 3,
+  id_table: 4,
+  session_date: Tables.get_session_date(4, 3)
 })

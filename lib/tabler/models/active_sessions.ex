@@ -1,9 +1,13 @@
 defmodule Tabler.ActiveSessions do
   use Ecto.Schema
   alias Tabler.Users
+  alias Tabler.Tables
 
   schema "active_sessions" do
-    has_many :id_players, Users, foreign_key: :id
-    timestamps([:session_date])
+    field :id_player, :integer
+    field :id_table, :integer
+    has_one :users, Users, foreign_key: :id
+    has_one :tables, Tables, foreign_key: :id
+    field :session_date, :naive_datetime
   end
 end
