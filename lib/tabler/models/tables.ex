@@ -1,6 +1,7 @@
 defmodule Tabler.Tables do
   use Ecto.Schema
   import Ecto.Changeset
+  alias Tabler.PlayerTables
 
   schema "tables" do
     field :table_admin, :string, default: nil
@@ -12,7 +13,8 @@ defmodule Tabler.Tables do
     field :initial_lvl, :string, default: nil
     field :player_experience, :string, default: nil
     field :chat_link, :string, default: nil
-    timestamps([{:created_at}])
+    timestamps([{:inserted_at, :created_at}, {:updated_at, false}])
+    belongs_to :player_tables, PlayerTables, references: :id_table
   end
 
   def changeset(table, attrs) do
@@ -20,5 +22,4 @@ defmodule Tabler.Tables do
     |> cast(attrs, [:title, :desc, :format, :status])
     |> validate_required([:title, :desc, :format, :status])
   end
-
 end
