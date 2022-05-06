@@ -2,6 +2,8 @@ defmodule Tabler.Users do
   use Ecto.Schema
   import Ecto.Changeset
   alias Tabler.PlayerTables
+  alias Tabler.ActiveSessions
+  alias Tabler.Tables
 
   schema "users" do
     field :name, :string
@@ -11,6 +13,9 @@ defmodule Tabler.Users do
     field :email, :string
     field :user_avatar, :string, default: nil
     belongs_to :player_tables, PlayerTables, references: :id_player
+    belongs_to :active_sessions, ActiveSessions, references: :id_player
+    belongs_to :tables, Tables, references: :table_admin
+    timestamps([{:inserted_at, :created_at}, {:updated_at, false}])
   end
 
   def changeset(player_table, attrs) do
