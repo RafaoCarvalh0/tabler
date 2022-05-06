@@ -867,7 +867,7 @@ Repo.insert!(%PlayerTables{
 
 Repo.insert!(%PlayerTables{
   id_table: 3,
-  id_player: 40,
+  id_player: 1,
   is_dm: 0,
   char_sheet: "C:/SheetPath",
   char_name: "teste4",
@@ -875,8 +875,8 @@ Repo.insert!(%PlayerTables{
 })
 
 Repo.insert!(%PlayerTables{
-  id_table: 1,
-  id_player: 3,
+  id_table: 4,
+  id_player: 1,
   is_dm: 0,
   char_sheet: "C:/ehissoae",
   char_name: "Gilson",
@@ -884,8 +884,8 @@ Repo.insert!(%PlayerTables{
 })
 
 Repo.insert!(%PlayerTables{
-  id_table: 3,
-  id_player: 2,
+  id_table: 5,
+  id_player: 1,
   is_dm: 0,
   char_sheet: "teste",
   char_name: "teste6",
@@ -893,8 +893,8 @@ Repo.insert!(%PlayerTables{
 })
 
 Repo.insert!(%PlayerTables{
-  id_table: 3,
-  id_player: 3,
+  id_table: 5,
+  id_player: 2,
   is_dm: 0,
   char_sheet: "teste",
   char_name: "teste7",
@@ -902,8 +902,8 @@ Repo.insert!(%PlayerTables{
 })
 
 Repo.insert!(%PlayerTables{
-  id_table: 3,
-  id_player: 41,
+  id_table: 5,
+  id_player: 3,
   is_dm: 1,
   char_sheet: "teste",
   char_name: "teste8",
@@ -911,8 +911,8 @@ Repo.insert!(%PlayerTables{
 })
 
 Repo.insert!(%PlayerTables{
-  id_table: 10,
-  id_player: 1,
+  id_table: 5,
+  id_player: 4,
   is_dm: 1,
   char_sheet: "teste",
   char_name: "teste9",
@@ -920,7 +920,7 @@ Repo.insert!(%PlayerTables{
 })
 
 Repo.insert!(%PlayerTables{
-  id_table: 5,
+  id_table: 6,
   id_player: 1,
   is_dm: 0,
   char_sheet: "CharSheet/Offar/Osmar",
@@ -929,8 +929,8 @@ Repo.insert!(%PlayerTables{
 })
 
 Repo.insert!(%PlayerTables{
-  id_table: 7,
-  id_player: 1,
+  id_table: 6,
+  id_player: 2,
   is_dm: 0,
   char_sheet: "CharSheet/Offar/teste",
   char_name: "teste",
@@ -938,17 +938,8 @@ Repo.insert!(%PlayerTables{
 })
 
 Repo.insert!(%PlayerTables{
-  id_table: 35,
-  id_player: 1,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 34,
-  id_player: 1,
+  id_table: 6,
+  id_player: 3,
   is_dm: 0,
   char_sheet: "CharSheet/Offar/te",
   char_name: "te",
@@ -957,7 +948,7 @@ Repo.insert!(%PlayerTables{
 
 Repo.insert!(%PlayerTables{
   id_table: 6,
-  id_player: 1,
+  id_player: 4,
   is_dm: 0,
   char_sheet: "CharSheet/Offar/jgf",
   char_name: "jgf",
@@ -965,359 +956,8 @@ Repo.insert!(%PlayerTables{
 })
 
 Repo.insert!(%PlayerTables{
-  id_table: 21,
-  id_player: 1,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 25,
-  id_player: 1,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 36,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/a",
-  char_name: "a",
-  char_class: "r"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 31,
-  id_player: 1,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 16,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/teste",
-  char_name: "teste",
-  char_class: "asdasd"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 26,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/Farael",
-  char_name: "Farael",
-  char_class: "gostoso"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 24,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/Joania",
-  char_name: "Joania",
-  char_class: "sfada"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 23,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/atwhdb",
-  char_name: "atwhdb",
-  char_class: "sesbsh"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 19,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/sdasda",
-  char_name: "sdasda",
-  char_class: "asdasd"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 22,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/teste",
-  char_name: "teste",
-  char_class: "hbyhhg"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 20,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/Teste",
-  char_name: "Teste",
-  char_class: "ajbdahbd"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 11,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/aaaa",
-  char_name: "aaaa",
-  char_class: "sssss"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 12,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/nsdjjds",
-  char_name: "nsdjjds",
-  char_class: "snsnnss"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 13,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/jaaaj",
-  char_name: "jaaaj",
-  char_class: "jooooj"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 14,
-  id_player: 1,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 37,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/Josivaldo",
-  char_name: "Josivaldo",
-  char_class: "Archero"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 1,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
   id_table: 6,
-  id_player: 68,
-  is_dm: 0,
-  char_sheet: "CharSheet/UserTeste/Josefo",
-  char_name: "Josefo",
-  char_class: "1234"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 3,
-  id_player: 68,
-  is_dm: 0,
-  char_sheet: "CharSheet/UserTeste/Josefoe",
-  char_name: "Josefoe",
-  char_class: "1234"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 4,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 5,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 36,
-  id_player: 68,
-  is_dm: 0,
-  char_sheet: "CharSheet/UserTeste/joao ricardo",
-  char_name: "joao ricardo",
-  char_class: "Musico"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 37,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 35,
-  id_player: 68,
-  is_dm: 0,
-  char_sheet: "CharSheet/UserTeste/joooa",
-  char_name: "joooa",
-  char_class: "ssds"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 12,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 27,
-  id_player: 69,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 34,
-  id_player: 69,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 27,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/globonildo",
-  char_name: "globonildo",
-  char_class: "clerigo do pao de alho"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 4,
-  id_player: 1,
-  is_dm: 0,
-  char_sheet: "CharSheet/Offar/Dougloncio",
-  char_name: "Dougloncio",
-  char_class: "cuzao"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 4,
-  id_player: 69,
-  is_dm: 0,
-  char_sheet: "CharSheet/Vitinho do Sus/Viiv sus",
-  char_name: "Viiv sus",
-  char_class: "Rafao"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 6,
-  id_player: 69,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 7,
-  id_player: 68,
-  is_dm: 0,
-  char_sheet: "CharSheet/UserTeste/Testonildo",
-  char_name: "Testonildo",
-  char_class: "guerreiro"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 8,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 24,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 23,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 38,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 19,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 15,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 13,
-  id_player: 68,
-  is_dm: 1,
-  char_sheet: "Mestre",
-  char_name: "Mestre",
-  char_class: "Mestre"
-})
-
-Repo.insert!(%PlayerTables{
-  id_table: 39,
-  id_player: 68,
+  id_player: 5,
   is_dm: 1,
   char_sheet: "Mestre",
   char_name: "Mestre",
