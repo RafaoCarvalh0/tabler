@@ -4,7 +4,7 @@ defmodule Tabler.Repo.Migrations.CreateActiveSessions do
   def change do
     create table(:active_sessions) do
       add :player_id, references(:users), null: false
-      add :session_date, :date, default: nil
+      add :session_date, :timestamp, default: nil
     end
   end
 end

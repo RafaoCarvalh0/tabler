@@ -12,7 +12,7 @@ defmodule Tabler.Repo.Migrations.CreateTables do
       add :initial_lvl, :string, size: 3, default: nil
       add :player_experience, :string, size: 45, default: nil
       add :chat_link, :string, default: nil
-      add :created_at, :date, default: DateTime.truncate(DateTime.utc_now(), :second)
+      timestamps([{:inserted_at, :created_at}, {:updated_at, false}])
     end
   end
 end

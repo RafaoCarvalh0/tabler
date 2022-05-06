@@ -4,6 +4,4 @@ defmodule Tabler.Formats do
   schema "formats" do
     field :desc, :string
   end
-
-
 end

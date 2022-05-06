@@ -4,7 +4,7 @@ import Config
 config :tabler, Tabler.Repo,
   username: System.get_env("MYSQL_USER"),
   password: System.get_env("MYSQL_PASSWORD"),
-  hostname: String.to_integer(System.get_env("DATABASE_HOST")),
+  hostname: System.get_env("DATABASE_HOST"),
   database: System.get_env("DATABASE_DEV"),
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
